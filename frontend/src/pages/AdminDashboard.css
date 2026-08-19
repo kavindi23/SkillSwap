@@ -1,0 +1,508 @@
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.admin-main {
+  flex: 1;
+  min-width: 0;
+
+  padding: 36px 42px 45px;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.admin-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+.admin-header-label {
+  margin: 0;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.admin-header h1 {
+  margin: 7px 0;
+
+  color: #0f172a;
+
+  font-size: 31px;
+  font-weight: 700;
+}
+
+.admin-header-description {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ================================
+   ADMIN PROFILE ICON
+================================ */
+
+.admin-avatar {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  box-shadow:
+    0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+
+/* ================================
+   ERROR MESSAGE
+================================ */
+
+.admin-error {
+  margin-bottom: 22px;
+
+  padding: 12px 15px;
+
+  border-radius: 8px;
+
+  background: #fee2e2;
+  color: #991b1b;
+
+  font-size: 14px;
+}
+
+
+/* ================================
+   STATISTICS GRID
+================================ */
+
+.admin-stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 26px;
+}
+
+
+/* ================================
+   STATISTIC CARD
+================================ */
+
+.admin-stat-card {
+  min-height: 115px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  background: white;
+
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 14px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  box-sizing: border-box;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(15, 23, 42, 0.09);
+}
+
+
+/* ================================
+   STAT ICON
+================================ */
+
+.admin-stat-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #eff6ff;
+
+  font-size: 22px;
+}
+
+
+/* ================================
+   STAT TEXT
+================================ */
+
+.admin-stat-info {
+  min-width: 0;
+}
+
+.admin-stat-info p {
+  margin: 0 0 5px;
+
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.admin-stat-info h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 26px;
+  font-weight: 700;
+}
+
+
+/* ================================
+   ADMIN CONTENT GRID
+================================ */
+
+.admin-content-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(280px, 1fr);
+
+  gap: 20px;
+}
+
+
+/* ================================
+   GENERAL ADMIN CARD
+================================ */
+
+.admin-card {
+  padding: 24px;
+
+  background: white;
+
+  border: 1px solid #eef2f7;
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.admin-card-header {
+  margin-bottom: 20px;
+}
+
+.admin-card-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 20px;
+}
+
+.admin-card-header p {
+  margin: 6px 0 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+/* ================================
+   PLATFORM OVERVIEW
+================================ */
+
+.admin-overview-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.admin-overview-item {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 14px 15px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+
+  background: #f8fafc;
+}
+
+.admin-overview-item span {
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.admin-overview-item strong {
+  color: #0f172a;
+
+  font-size: 14px;
+}
+
+
+/* ================================
+   QUICK ACTIONS
+================================ */
+
+.admin-quick-actions {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.admin-action-link {
+  display: flex;
+  align-items: center;
+
+  min-height: 44px;
+
+  padding: 13px 14px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  background: #f8fafc;
+  color: #334155;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.admin-action-link:hover {
+  border-color: #2563eb;
+
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+
+/* ================================
+   LOADING SCREEN
+================================ */
+
+.admin-loading {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f7fb;
+
+  color: #475569;
+
+  font-size: 17px;
+}
+
+
+/* ================================
+   RESPONSIVE - TABLET
+================================ */
+
+@media (max-width: 1100px) {
+
+  .admin-stats-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ================================
+   RESPONSIVE - MOBILE
+================================ */
+
+@media (max-width: 750px) {
+
+  .admin-main {
+    width: 100%;
+
+    padding: 20px 16px 30px;
+  }
+
+
+  /* HEADER */
+
+  .admin-header {
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+  }
+
+  .admin-header > div:first-child {
+    min-width: 0;
+  }
+
+  .admin-header h1 {
+    font-size: 27px;
+
+    overflow-wrap: anywhere;
+  }
+
+  .admin-header-description {
+    font-size: 14px;
+
+    line-height: 1.4;
+  }
+
+  .admin-avatar {
+    width: 46px;
+    height: 46px;
+
+    font-size: 13px;
+  }
+
+
+  /* STATISTICS */
+
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+
+    margin-bottom: 18px;
+  }
+
+  .admin-stat-card {
+    min-height: 96px;
+
+    padding: 17px;
+  }
+
+  .admin-stat-icon {
+    width: 42px;
+    height: 42px;
+
+    font-size: 20px;
+  }
+
+  .admin-stat-info h2 {
+    font-size: 24px;
+  }
+
+
+  /* CONTENT */
+
+  .admin-content-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .admin-card {
+    padding: 18px;
+  }
+
+  .admin-card-header {
+    margin-bottom: 16px;
+  }
+
+  .admin-card-header h2 {
+    font-size: 19px;
+  }
+
+  .admin-overview-item {
+    padding: 12px 13px;
+  }
+
+  .admin-overview-item span,
+  .admin-overview-item strong {
+    font-size: 13px;
+  }
+
+  .admin-action-link {
+    width: 100%;
+
+    min-height: 44px;
+  }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 380px) {
+
+  .admin-main {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .admin-header {
+    gap: 10px;
+  }
+
+  .admin-header h1 {
+    font-size: 24px;
+  }
+
+  .admin-card {
+    padding: 16px;
+  }
+}

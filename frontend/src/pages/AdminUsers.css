@@ -1,0 +1,758 @@
+/* =========================================
+   MAIN
+========================================= */
+
+.admin-users-main {
+  flex: 1;
+  min-width: 0;
+
+  padding: 36px 42px 45px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-users-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 25px;
+
+  margin-bottom: 28px;
+}
+
+.admin-users-label {
+  margin: 0;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.admin-users-header h1 {
+  margin: 7px 0;
+
+  color: #0f172a;
+
+  font-size: 31px;
+}
+
+.admin-users-header > div:first-child > p:last-child {
+  margin: 0;
+
+  color: #64748b;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   USER COUNT
+========================================= */
+
+.admin-users-count {
+  min-width: 155px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 16px 20px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.admin-users-count > span {
+  font-size: 25px;
+}
+
+.admin-users-count p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+.admin-users-count h2 {
+  margin: 2px 0 0;
+
+  color: #0f172a;
+}
+
+
+/* =========================================
+   SUCCESS / ERROR
+========================================= */
+
+.admin-users-success,
+.admin-users-error {
+  margin-bottom: 20px;
+
+  padding: 12px 15px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+}
+
+.admin-users-success {
+  background: #dcfce7;
+
+  color: #166534;
+}
+
+.admin-users-error {
+  background: #fee2e2;
+
+  color: #991b1b;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.admin-users-card {
+  padding: 25px;
+
+  background: white;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.admin-users-card-header {
+  margin-bottom: 20px;
+}
+
+.admin-users-card-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 21px;
+}
+
+.admin-users-card-header p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.admin-users-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.admin-users-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.admin-users-table th {
+  padding: 13px 12px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-align: left;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  white-space: nowrap;
+}
+
+.admin-users-table td {
+  padding: 15px 12px;
+
+  color: #475569;
+
+  font-size: 13px;
+
+  border-bottom: 1px solid #eef2f7;
+
+  vertical-align: middle;
+}
+
+.admin-users-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+
+/* =========================================
+   USER INFO
+========================================= */
+
+.admin-user-info {
+  min-width: 210px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+.admin-user-avatar {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-user-info > div:last-child {
+  min-width: 0;
+}
+
+.admin-user-info strong {
+  display: block;
+
+  color: #0f172a;
+
+  font-size: 13px;
+
+  overflow-wrap: anywhere;
+}
+
+.admin-user-info span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   ROLE
+========================================= */
+
+.admin-role-badge {
+  display: inline-flex;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  text-transform: uppercase;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.admin-role-badge.student {
+  background: #dbeafe;
+
+  color: #1d4ed8;
+}
+
+.admin-role-badge.admin {
+  background: #ede9fe;
+
+  color: #6d28d9;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admin-status-badge {
+  display: inline-flex;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.admin-status-badge.active {
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+.admin-status-badge.inactive {
+  background: #fee2e2;
+
+  color: #b91c1c;
+}
+
+
+/* =========================================
+   UNIVERSITY
+========================================= */
+
+.admin-university-info {
+  min-width: 150px;
+}
+
+.admin-university-info span {
+  display: block;
+
+  overflow-wrap: anywhere;
+}
+
+.admin-university-info small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #94a3b8;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.deactivate-user-button,
+.activate-user-button {
+  min-height: 38px;
+
+  padding: 7px 11px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.deactivate-user-button {
+  border: 1px solid #fecaca;
+
+  background: white;
+
+  color: #dc2626;
+}
+
+.deactivate-user-button:hover:not(:disabled) {
+  background: #fef2f2;
+}
+
+.activate-user-button {
+  border: none;
+
+  background: #16a34a;
+
+  color: white;
+}
+
+.activate-user-button:hover:not(:disabled) {
+  background: #15803d;
+}
+
+.deactivate-user-button:disabled,
+.activate-user-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+.admin-protected-text {
+  color: #94a3b8;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.admin-users-empty {
+  padding: 45px 20px;
+
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+
+  color: #64748b;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.admin-users-loading {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f7fb;
+
+  color: #475569;
+
+  font-size: 17px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .admin-users-main {
+    padding: 28px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+  .admin-users-main {
+    width: 100%;
+
+    padding: 20px 16px 30px;
+  }
+
+
+  /* HEADER */
+
+  .admin-users-header {
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+  }
+
+  .admin-users-header > div:first-child {
+    min-width: 0;
+  }
+
+  .admin-users-header h1 {
+    font-size: 27px;
+  }
+
+  .admin-users-header > div:first-child > p:last-child {
+    font-size: 14px;
+
+    line-height: 1.4;
+  }
+
+  .admin-users-count {
+    min-width: 96px;
+
+    padding: 12px;
+
+    gap: 8px;
+  }
+
+  .admin-users-count > span {
+    font-size: 20px;
+  }
+
+  .admin-users-count p {
+    font-size: 11px;
+  }
+
+  .admin-users-count h2 {
+    font-size: 20px;
+  }
+
+
+  /* MAIN CARD */
+
+  .admin-users-card {
+    padding: 16px;
+
+    border-radius: 12px;
+  }
+
+  .admin-users-card-header {
+    margin-bottom: 16px;
+  }
+
+  .admin-users-card-header h2 {
+    font-size: 19px;
+  }
+
+
+  /* ================================
+     MOBILE TABLE -> USER CARDS
+  ================================ */
+
+  .admin-users-table-wrapper {
+    overflow: visible;
+  }
+
+  .admin-users-table,
+  .admin-users-table tbody,
+  .admin-users-table tr,
+  .admin-users-table td {
+    display: block;
+
+    width: 100%;
+  }
+
+  .admin-users-table thead {
+    display: none;
+  }
+
+  .admin-users-table {
+    border-collapse: separate;
+  }
+
+  .admin-users-table tbody {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .admin-users-table tbody tr {
+    padding: 14px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    box-shadow:
+      0 2px 8px rgba(15, 23, 42, 0.04);
+  }
+
+  .admin-users-table tbody tr:hover {
+    background: #ffffff;
+  }
+
+  .admin-users-table td {
+    position: relative;
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #eef2f7;
+
+    text-align: right;
+  }
+
+  .admin-users-table td:last-child {
+    border-bottom: none;
+
+    padding-bottom: 0;
+  }
+
+
+  /* labels for each table field */
+
+  .admin-users-table td::before {
+    flex-shrink: 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-align: left;
+  }
+
+  .admin-users-table td:nth-child(1)::before {
+    content: "User";
+  }
+
+  .admin-users-table td:nth-child(2)::before {
+    content: "Role";
+  }
+
+  .admin-users-table td:nth-child(3)::before {
+    content: "University";
+  }
+
+  .admin-users-table td:nth-child(4)::before {
+    content: "Location";
+  }
+
+  .admin-users-table td:nth-child(5)::before {
+    content: "Rating";
+  }
+
+  .admin-users-table td:nth-child(6)::before {
+    content: "Status";
+  }
+
+  .admin-users-table td:nth-child(7)::before {
+    content: "Action";
+  }
+
+
+  /* USER ROW */
+
+  .admin-users-table td:first-child {
+    display: block;
+
+    padding-top: 0;
+  }
+
+  .admin-users-table td:first-child::before {
+    display: block;
+
+    margin-bottom: 10px;
+  }
+
+  .admin-user-info {
+    width: 100%;
+    min-width: 0;
+
+    justify-content: flex-start;
+
+    text-align: left;
+  }
+
+  .admin-user-info strong {
+    font-size: 14px;
+  }
+
+  .admin-user-info span {
+    font-size: 11px;
+  }
+
+
+  /* UNIVERSITY */
+
+  .admin-university-info {
+    min-width: 0;
+
+    max-width: 65%;
+
+    text-align: right;
+  }
+
+
+  /* BUTTON */
+
+  .deactivate-user-button,
+  .activate-user-button {
+    min-width: 110px;
+    min-height: 44px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .admin-users-main {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .admin-users-header {
+    flex-direction: column;
+  }
+
+  .admin-users-count {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .admin-users-card {
+    padding: 14px;
+  }
+
+  .admin-users-table td {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    text-align: left;
+  }
+
+  .admin-university-info {
+    max-width: 100%;
+
+    text-align: left;
+  }
+
+  .deactivate-user-button,
+  .activate-user-button {
+    width: 100%;
+  }
+}

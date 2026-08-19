@@ -1,0 +1,539 @@
+/* =========================================
+   MAIN
+========================================= */
+
+.admin-exchanges-main {
+  flex: 1;
+  min-width: 0;
+
+  padding: 36px 42px 45px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-exchanges-header {
+  margin-bottom: 28px;
+}
+
+.admin-exchanges-label {
+  margin: 0;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.admin-exchanges-header h1 {
+  margin: 7px 0;
+
+  color: #0f172a;
+
+  font-size: 31px;
+}
+
+.admin-exchanges-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.admin-exchanges-error {
+  margin-bottom: 20px;
+
+  padding: 12px 15px;
+
+  border-radius: 8px;
+
+  background: #fee2e2;
+  color: #991b1b;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.admin-exchange-summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+.admin-exchange-summary-card {
+  padding: 20px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.admin-exchange-summary-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.admin-exchange-summary-card h2 {
+  margin: 7px 0 0;
+
+  color: #0f172a;
+
+  font-size: 26px;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.admin-exchanges-card {
+  padding: 25px;
+
+  background: white;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.admin-exchanges-card-header {
+  margin-bottom: 20px;
+}
+
+.admin-exchanges-card-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 21px;
+}
+
+.admin-exchanges-card-header p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.admin-exchanges-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.admin-exchanges-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.admin-exchanges-table th {
+  padding: 13px 12px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-align: left;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  white-space: nowrap;
+}
+
+.admin-exchanges-table td {
+  padding: 15px 12px;
+
+  color: #475569;
+
+  font-size: 13px;
+
+  border-bottom: 1px solid #eef2f7;
+
+  vertical-align: middle;
+}
+
+.admin-exchanges-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+
+/* =========================================
+   EXCHANGE / USER CELLS
+========================================= */
+
+.exchange-id-cell,
+.exchange-user-cell {
+  min-width: 0;
+}
+
+.exchange-id-cell strong,
+.exchange-user-cell strong {
+  display: block;
+
+  color: #0f172a;
+
+  overflow-wrap: anywhere;
+}
+
+.exchange-id-cell span,
+.exchange-user-cell span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admin-exchange-status {
+  display: inline-flex;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.admin-exchange-status.active {
+  background: #fef3c7;
+
+  color: #b45309;
+}
+
+.admin-exchange-status.completed {
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.admin-exchanges-empty {
+  padding: 45px 20px;
+
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+
+  color: #64748b;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.admin-exchanges-loading {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f7fb;
+
+  color: #475569;
+
+  font-size: 17px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .admin-exchange-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-exchanges-main {
+    padding: 28px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+  .admin-exchanges-main {
+    width: 100%;
+
+    padding: 20px 16px 30px;
+  }
+
+
+  /* HEADER */
+
+  .admin-exchanges-header {
+    margin-bottom: 20px;
+  }
+
+  .admin-exchanges-header h1 {
+    font-size: 27px;
+  }
+
+  .admin-exchanges-header p {
+    font-size: 14px;
+
+    line-height: 1.4;
+  }
+
+
+  /* SUMMARY */
+
+  .admin-exchange-summary-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+  }
+
+  .admin-exchange-summary-card {
+    padding: 16px;
+  }
+
+  .admin-exchange-summary-card h2 {
+    font-size: 24px;
+  }
+
+
+  /* MAIN CARD */
+
+  .admin-exchanges-card {
+    padding: 16px;
+
+    border-radius: 12px;
+  }
+
+  .admin-exchanges-card-header {
+    margin-bottom: 16px;
+  }
+
+  .admin-exchanges-card-header h2 {
+    font-size: 19px;
+  }
+
+
+  /* =========================================
+     MOBILE TABLE -> EXCHANGE CARDS
+  ========================================= */
+
+  .admin-exchanges-table-wrapper {
+    overflow: visible;
+  }
+
+  .admin-exchanges-table,
+  .admin-exchanges-table tbody,
+  .admin-exchanges-table tr,
+  .admin-exchanges-table td {
+    display: block;
+
+    width: 100%;
+  }
+
+  .admin-exchanges-table thead {
+    display: none;
+  }
+
+  .admin-exchanges-table {
+    border-collapse: separate;
+  }
+
+  .admin-exchanges-table tbody {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .admin-exchanges-table tbody tr {
+    padding: 14px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 11px;
+
+    background: white;
+
+    box-shadow:
+      0 2px 8px rgba(15, 23, 42, 0.04);
+  }
+
+  .admin-exchanges-table tbody tr:hover {
+    background: white;
+  }
+
+  .admin-exchanges-table td {
+    position: relative;
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #eef2f7;
+
+    text-align: right;
+  }
+
+  .admin-exchanges-table td:last-child {
+    border-bottom: none;
+
+    padding-bottom: 0;
+  }
+
+
+  /* MOBILE FIELD LABELS */
+
+  .admin-exchanges-table td::before {
+    flex-shrink: 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-align: left;
+  }
+
+  .admin-exchanges-table td:nth-child(1)::before {
+    content: "Exchange";
+  }
+
+  .admin-exchanges-table td:nth-child(2)::before {
+    content: "Student A";
+  }
+
+  .admin-exchanges-table td:nth-child(3)::before {
+    content: "Student B";
+  }
+
+  .admin-exchanges-table td:nth-child(4)::before {
+    content: "Status";
+  }
+
+  .admin-exchanges-table td:nth-child(5)::before {
+    content: "Sessions";
+  }
+
+  .admin-exchanges-table td:nth-child(6)::before {
+    content: "Reviews";
+  }
+
+
+  /* EXCHANGE / USERS */
+
+  .exchange-id-cell,
+  .exchange-user-cell {
+    max-width: 65%;
+
+    text-align: right;
+  }
+
+  .exchange-id-cell strong,
+  .exchange-user-cell strong {
+    font-size: 13px;
+  }
+
+  .exchange-id-cell span,
+  .exchange-user-cell span {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .admin-exchanges-main {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .admin-exchanges-card {
+    padding: 14px;
+  }
+
+  .admin-exchanges-table td {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    text-align: left;
+  }
+
+  .exchange-id-cell,
+  .exchange-user-cell {
+    max-width: 100%;
+
+    text-align: left;
+  }
+}

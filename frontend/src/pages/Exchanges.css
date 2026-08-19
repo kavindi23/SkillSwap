@@ -1,0 +1,1297 @@
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.exchanges-main {
+  flex: 1;
+  min-width: 0;
+
+  padding: 36px 42px 45px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.exchanges-header {
+  margin-bottom: 28px;
+}
+
+.exchanges-label {
+  margin: 0;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.exchanges-header h1 {
+  margin: 7px 0;
+
+  color: #0f172a;
+
+  font-size: 31px;
+  font-weight: 700;
+}
+
+.exchanges-header > p:last-child {
+  margin: 0;
+
+  color: #64748b;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   SUCCESS / ERROR
+========================================= */
+
+.exchange-success,
+.exchange-error {
+  margin-bottom: 20px;
+
+  padding: 12px 15px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.exchange-success {
+  border: 1px solid #bbf7d0;
+
+  background: #dcfce7;
+  color: #166534;
+}
+
+.exchange-error {
+  border: 1px solid #fecaca;
+
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.exchange-summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+.exchange-summary-card {
+  padding: 20px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.exchange-summary-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.exchange-summary-card h2 {
+  margin: 7px 0 0;
+
+  color: #0f172a;
+
+  font-size: 26px;
+}
+
+
+/* =========================================
+   COMMON SECTIONS
+========================================= */
+
+.exchange-section {
+  margin-bottom: 24px;
+
+  padding: 25px;
+
+  background: white;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.exchange-section-header {
+  margin-bottom: 20px;
+}
+
+.exchange-section-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 21px;
+}
+
+.exchange-section-header p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   REQUEST CARDS
+========================================= */
+
+.request-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.request-card {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding: 18px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  background: white;
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.request-card:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 15px rgba(15, 23, 42, 0.05);
+}
+
+.request-card > div:first-child {
+  min-width: 0;
+}
+
+.request-card h3 {
+  margin: 0 0 10px;
+
+  color: #0f172a;
+
+  overflow-wrap: anywhere;
+}
+
+.request-card p {
+  margin: 5px 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+.request-card strong {
+  color: #334155;
+}
+
+.request-message {
+  margin-top: 10px !important;
+
+  color: #334155 !important;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   REQUEST STATUS
+========================================= */
+
+.request-status {
+  display: inline-block;
+
+  margin-top: 10px;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.request-status.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.request-status.accepted {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.request-status.rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+
+/* =========================================
+   REQUEST ACTIONS
+========================================= */
+
+.request-actions {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+}
+
+.accept-button,
+.reject-button {
+  min-height: 40px;
+
+  padding: 9px 14px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.accept-button {
+  border: none;
+
+  background: #2563eb;
+  color: white;
+}
+
+.accept-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.reject-button {
+  border: 1px solid #fecaca;
+
+  background: white;
+  color: #dc2626;
+}
+
+.reject-button:hover:not(:disabled) {
+  background: #fef2f2;
+}
+
+.accept-button:disabled,
+.reject-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   ACTIVE EXCHANGES
+========================================= */
+
+.active-exchange-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.active-exchange-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  background: white;
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.active-exchange-card:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 15px rgba(15, 23, 42, 0.05);
+}
+
+.active-exchange-heading {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 15px;
+}
+
+.active-exchange-heading > div {
+  min-width: 0;
+}
+
+.active-exchange-card h3 {
+  margin: 0 0 10px;
+
+  color: #0f172a;
+
+  overflow-wrap: anywhere;
+}
+
+.active-exchange-card p {
+  margin: 5px 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   PARTNER NAME
+========================================= */
+
+.exchange-partner-name {
+  margin: 4px 0 12px;
+
+  color: #0f172a;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   ACTIVE BADGE
+========================================= */
+
+.active-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  background: #dcfce7;
+  color: #15803d;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   SESSION BUTTONS
+========================================= */
+
+.session-action-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 18px;
+}
+
+.session-action-buttons button {
+  min-height: 40px;
+
+  padding: 9px 12px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+
+  background: white;
+  color: #334155;
+
+  font-family: inherit;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.session-action-buttons button:hover:not(:disabled) {
+  border-color: #2563eb;
+
+  color: #2563eb;
+}
+
+.session-action-buttons .schedule-session-button {
+  border: none;
+
+  background: #2563eb;
+  color: white;
+}
+
+.session-action-buttons .schedule-session-button:hover:not(:disabled) {
+  background: #1d4ed8;
+  color: white;
+}
+
+
+/* =========================================
+   COMPLETE EXCHANGE BUTTON
+========================================= */
+
+.session-action-buttons .complete-exchange-button {
+  border: none;
+
+  background: #16a34a;
+  color: white;
+
+  font-weight: 600;
+}
+
+.session-action-buttons .complete-exchange-button:hover:not(:disabled) {
+  border: none;
+
+  background: #15803d;
+  color: white;
+}
+
+.session-action-buttons .complete-exchange-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   SESSION AREA
+========================================= */
+
+.sessions-area {
+  margin-top: 20px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.sessions-area > h4 {
+  margin: 0 0 12px;
+
+  color: #0f172a;
+
+  font-size: 16px;
+}
+
+.session-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.session-card {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 15px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+
+  background: #f8fafc;
+}
+
+.session-card > div:first-child {
+  min-width: 0;
+}
+
+.session-card h4 {
+  margin: 0 0 8px;
+
+  color: #0f172a;
+
+  overflow-wrap: anywhere;
+}
+
+.session-card p {
+  margin: 4px 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  overflow-wrap: anywhere;
+}
+
+.session-card a {
+  display: inline-block;
+
+  max-width: 100%;
+
+  margin-top: 8px;
+
+  color: #2563eb;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+}
+
+.session-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   SESSION STATUS
+========================================= */
+
+.session-status-area {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.session-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.session-status.scheduled {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.session-status.completed {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+
+/* =========================================
+   COMPLETE SESSION BUTTON
+========================================= */
+
+.complete-session-button {
+  min-height: 40px;
+
+  padding: 8px 11px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #16a34a;
+  color: white;
+
+  font-family: inherit;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.complete-session-button:hover {
+  background: #15803d;
+}
+
+.no-session-text {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   SESSION FORM
+========================================= */
+
+.session-form-section {
+  border-top: 4px solid #2563eb;
+}
+
+.session-form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 0 20px;
+}
+
+.session-form-group {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 17px;
+}
+
+.session-form-group label {
+  margin-bottom: 7px;
+
+  color: #334155;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.session-form-group input,
+.session-form-group select {
+  width: 100%;
+  height: 45px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  background: white;
+  color: #0f172a;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  transition: 0.2s ease;
+}
+
+.session-form-group input:focus,
+.session-form-group select:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.session-form-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+.save-session-button,
+.cancel-session-button {
+  min-height: 42px;
+
+  padding: 11px 18px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.save-session-button {
+  border: none;
+
+  background: #2563eb;
+  color: white;
+}
+
+.save-session-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.save-session-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+.cancel-session-button {
+  border: 1px solid #cbd5e1;
+
+  background: white;
+  color: #334155;
+}
+
+.cancel-session-button:hover {
+  background: #f8fafc;
+}
+
+
+/* =========================================
+   COMPLETED EXCHANGES
+========================================= */
+
+.completed-exchange-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.completed-exchange-card {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  min-width: 0;
+
+  padding: 20px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  background: white;
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.completed-exchange-card:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 15px rgba(15, 23, 42, 0.05);
+}
+
+.completed-exchange-card > div {
+  min-width: 0;
+}
+
+.completed-exchange-card h3 {
+  margin: 0 0 14px;
+
+  color: #0f172a;
+
+  font-size: 18px;
+
+  overflow-wrap: anywhere;
+}
+
+.completed-exchange-card p {
+  margin: 0 0 4px;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   COMPLETED BADGE
+========================================= */
+
+.completed-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  background: #dcfce7;
+  color: #15803d;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   LEAVE REVIEW BUTTON
+========================================= */
+
+.review-button {
+  min-height: 40px;
+
+  padding: 9px 14px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #2563eb;
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.review-button:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   REVIEW FORM
+========================================= */
+
+.review-form-section {
+  border-top: 4px solid #2563eb;
+}
+
+.review-form-group {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 17px;
+}
+
+.review-form-group label {
+  margin-bottom: 7px;
+
+  color: #334155;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.review-form-group select,
+.review-form-group textarea {
+  width: 100%;
+
+  padding: 11px 12px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  background: white;
+  color: #0f172a;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  transition: 0.2s ease;
+}
+
+.review-form-group select {
+  height: 45px;
+}
+
+.review-form-group textarea {
+  min-height: 110px;
+
+  resize: vertical;
+}
+
+.review-form-group select:focus,
+.review-form-group textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================
+   REVIEW FORM ACTIONS
+========================================= */
+
+.review-form-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+.submit-review-button,
+.cancel-review-button {
+  min-height: 42px;
+
+  padding: 10px 17px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.submit-review-button {
+  border: none;
+
+  background: #2563eb;
+  color: white;
+}
+
+.submit-review-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.submit-review-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+.cancel-review-button {
+  border: 1px solid #cbd5e1;
+
+  background: white;
+  color: #334155;
+}
+
+.cancel-review-button:hover {
+  background: #f8fafc;
+
+  border-color: #94a3b8;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.exchange-empty {
+  padding: 30px;
+
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+
+  color: #64748b;
+
+  text-align: center;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .exchange-summary-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .active-exchange-grid,
+  .completed-exchange-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+  .exchanges-main {
+    padding: 20px 16px 30px;
+  }
+
+
+  /* HEADER */
+
+  .exchanges-header {
+    margin-bottom: 20px;
+  }
+
+  .exchanges-header h1 {
+    font-size: 27px;
+  }
+
+  .exchanges-header > p:last-child {
+    font-size: 14px;
+
+    line-height: 1.4;
+  }
+
+
+  /* SUMMARY */
+
+  .exchange-summary-grid,
+  .active-exchange-grid,
+  .completed-exchange-grid,
+  .session-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exchange-summary-grid {
+    gap: 12px;
+
+    margin-bottom: 18px;
+  }
+
+  .exchange-summary-card {
+    padding: 16px;
+  }
+
+  .exchange-summary-card h2 {
+    font-size: 24px;
+  }
+
+
+  /* COMMON SECTIONS */
+
+  .exchange-section {
+    margin-bottom: 18px;
+
+    padding: 16px;
+
+    border-radius: 12px;
+  }
+
+  .exchange-section-header {
+    margin-bottom: 16px;
+  }
+
+  .exchange-section-header h2 {
+    font-size: 19px;
+  }
+
+
+  /* REQUESTS */
+
+  .request-card {
+    flex-direction: column;
+
+    padding: 14px;
+
+    gap: 14px;
+  }
+
+  .request-card h3 {
+    font-size: 16px;
+  }
+
+  .request-card p {
+    font-size: 13px;
+  }
+
+  .request-actions {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .accept-button,
+  .reject-button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+
+  /* ACTIVE EXCHANGE */
+
+  .active-exchange-card {
+    padding: 16px;
+  }
+
+  .active-exchange-heading {
+    gap: 10px;
+  }
+
+  .session-action-buttons {
+    flex-direction: column;
+  }
+
+  .session-action-buttons button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+
+  /* SESSION CARD */
+
+  .session-card {
+    flex-direction: column;
+
+    padding: 14px;
+  }
+
+  .session-status-area {
+    width: 100%;
+
+    align-items: flex-start;
+  }
+
+  .complete-session-button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+
+  /* SESSION FORM */
+
+  .session-form-actions {
+    flex-direction: column;
+  }
+
+  .save-session-button,
+  .cancel-session-button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+
+  /* COMPLETED EXCHANGE */
+
+  .completed-exchange-card {
+    flex-direction: column;
+
+    padding: 16px;
+  }
+
+  .review-button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+
+  /* REVIEW FORM */
+
+  .review-form-actions {
+    flex-direction: column;
+  }
+
+  .submit-review-button,
+  .cancel-review-button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+
+  /* EMPTY */
+
+  .exchange-empty {
+    padding: 24px 16px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .exchanges-main {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .exchange-section {
+    padding: 14px;
+  }
+
+  .active-exchange-heading {
+    flex-direction: column;
+  }
+
+  .active-badge {
+    align-self: flex-start;
+  }
+}

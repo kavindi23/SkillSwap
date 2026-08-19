@@ -1,0 +1,41 @@
+# Environment variables / secrets
+.env
+.env.*
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# Allow example environment files
+!.env.example
+
+# Python
+backend/venv/
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Frontend
+frontend/node_modules/
+node_modules/
+frontend/dist/
+dist/
+dist-ssr/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -34,16 +34,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(auth.router)
-app.include_router(users.router)
-app.include_router(skills.router)
-app.include_router(matches.router)
-app.include_router(exchanges.router)
-app.include_router(active_exchange.router)
-app.include_router(session.router)
-app.include_router(reviews.router)
-app.include_router(notifications.router)
-app.include_router(admin.router)
+app.include_router(auth.router, prefix="/api")
+app.include_router(users.router, prefix="/api")
+app.include_router(skills.router, prefix="/api")
+app.include_router(matches.router, prefix="/api")
+app.include_router(exchanges.router, prefix="/api")
+app.include_router(active_exchange.router, prefix="/api")
+app.include_router(session.router, prefix="/api")
+app.include_router(reviews.router, prefix="/api")
+app.include_router(notifications.router, prefix="/api")
+app.include_router(admin.router, prefix="/api")
 
 
 @app.get("/")

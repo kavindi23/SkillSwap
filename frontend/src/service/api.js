@@ -535,3 +535,23 @@ export async function completeExchange(exchangeId) {
 
   return data;
 }
+
+
+export async function getDashboardData() {
+  const response = await fetch(
+    `${API_BASE_URL}/dashboard/`,
+    {
+      headers: getAuthHeaders(),
+    }
+  );
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(
+      data.detail || "Failed to load dashboard"
+    );
+  }
+
+  return data;
+}

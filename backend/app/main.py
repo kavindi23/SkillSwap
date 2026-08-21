@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from app.routers import (
     active_exchange,
     auth,
+    dashboard,
     exchanges,
     matches,
     reviews,
@@ -35,6 +36,7 @@ app.add_middleware(
 )
 
 app.include_router(auth.router, prefix="/api")
+app.include_router(dashboard.router, prefix="/api")
 app.include_router(users.router, prefix="/api")
 app.include_router(skills.router, prefix="/api")
 app.include_router(matches.router, prefix="/api")

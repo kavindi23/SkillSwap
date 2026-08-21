@@ -4,10 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import StudentLayout from "../components/StudentLayout";
 
 import {
-  getMatches,
-  getMyExchanges,
-  getMyProfile,
-  getMySkills,
+  getDashboardData,
 } from "../service/api";
 
 import "./Dashboard.css";
@@ -39,38 +36,40 @@ function Dashboard() {
       try {
         setError("");
 
-        const [
-          profileData,
-          skillsData,
-          exchangeData,
-          matchData,
-        ] = await Promise.all([
-          getMyProfile(),
-          getMySkills(),
-          getMyExchanges(),
-          getMatches(),
-        ]);
+        const data = await getDashboardData();
 
-        setProfile(profileData);
+        setProfile(data.profile || null);
 
         setSkills({
-          teach: skillsData.teach || [],
-          learn: skillsData.learn || [],
+          teach: data.skills?.teach || [],
+          learn: data.skills?.learn || [],
         });
 
-        setExchanges(exchangeData || []);
-        setMatches(matchData || []);
+        setExchanges(
+          data.exchanges || []
+        );
+
+        setMatches(
+          data.matches || []
+        );
       } catch (err) {
         console.error(err);
 
         setError(err.message);
 
         if (
-          err.message === "Invalid or expired token" ||
-          err.message === "Your account is inactive"
+          err.message ===
+            "Invalid or expired token" ||
+          err.message ===
+            "Your account is inactive"
         ) {
-          localStorage.removeItem("access_token");
-          localStorage.removeItem("role");
+          localStorage.removeItem(
+            "access_token"
+          );
+
+          localStorage.removeItem(
+            "role"
+          );
 
           navigate("/");
         }
@@ -100,10 +99,11 @@ function Dashboard() {
   // DASHBOARD VALUES
   // =========================
 
-  const activeExchanges = exchanges.filter(
-    (exchange) =>
-      exchange.status === "ACTIVE"
-  );
+  const activeExchanges =
+    exchanges.filter(
+      (exchange) =>
+        exchange.status === "ACTIVE"
+    );
 
 
   const initials =
@@ -147,7 +147,7 @@ function Dashboard() {
           </div>
 
 
-          {/* CLICKABLE PROFILE AVATAR */}
+          {/* PROFILE AVATAR */}
 
           <Link
             to="/profile"
@@ -185,7 +185,6 @@ function Dashboard() {
             </span>
 
             <div>
-
               <p>
                 Skills I Teach
               </p>
@@ -193,7 +192,6 @@ function Dashboard() {
               <h2>
                 {skills.teach.length}
               </h2>
-
             </div>
 
           </div>
@@ -206,7 +204,6 @@ function Dashboard() {
             </span>
 
             <div>
-
               <p>
                 Skills I Want
               </p>
@@ -214,7 +211,6 @@ function Dashboard() {
               <h2>
                 {skills.learn.length}
               </h2>
-
             </div>
 
           </div>
@@ -227,7 +223,6 @@ function Dashboard() {
             </span>
 
             <div>
-
               <p>
                 Active Exchanges
               </p>
@@ -235,7 +230,6 @@ function Dashboard() {
               <h2>
                 {activeExchanges.length}
               </h2>
-
             </div>
 
           </div>
@@ -248,7 +242,6 @@ function Dashboard() {
             </span>
 
             <div>
-
               <p>
                 My Rating
               </p>
@@ -258,7 +251,6 @@ function Dashboard() {
                   profile?.rating || 0
                 ).toFixed(1)}
               </h2>
-
             </div>
 
           </div>
@@ -272,9 +264,7 @@ function Dashboard() {
 
         <section className="dashboard-grid">
 
-          {/* =========================
-              SKILL MATCHES
-          ========================== */}
+          {/* SKILL MATCHES */}
 
           <div className="dashboard-card">
 
@@ -349,8 +339,12 @@ function Dashboard() {
 
                         <p>
                           They teach:{" "}
-                          {match.they_can_teach_me?.length
-                            ? match.they_can_teach_me
+
+                          {match
+                            .they_can_teach_me
+                            ?.length
+                            ? match
+                                .they_can_teach_me
                                 .map(
                                   (skill) =>
                                     skill.name
@@ -362,8 +356,12 @@ function Dashboard() {
 
                         <p>
                           You teach:{" "}
-                          {match.i_can_teach_them?.length
-                            ? match.i_can_teach_them
+
+                          {match
+                            .i_can_teach_them
+                            ?.length
+                            ? match
+                                .i_can_teach_them
                                 .map(
                                   (skill) =>
                                     skill.name
@@ -393,9 +391,7 @@ function Dashboard() {
           </div>
 
 
-          {/* =========================
-              QUICK ACTIONS
-          ========================== */}
+          {/* QUICK ACTIONS */}
 
           <div className="dashboard-card">
 
